@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- le indica al navegador que el contenido es html5  -->
+<html lang="es">
+    <!-- Todo documento tiene una etiqueta html y esta es la madre de todas las etiquetas -->
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- aporta meta informacion del contenido del documento, solo tiene una apertura y no un cierre -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cyberpunk</title>
+    </head>
+<body>
+    <!-- Emmet: es plugin para editores de code, que nos proporcionaran atajos para programar de mejor manera  -->
+    <h1>Encabezado principal</h1>
+    <!-- Encabezado: implementa 6 niveles de importantia desde h1, el mas importante, hasta h6 el menos importante -->
+    <h2>Encabezado</h2>
+    <h3>Encabezado</h3>
+    <h4>Encabezado</h4>
+    <h5>Encabezado</h5>
+    <h6>Encabezado</h6>
+    <!-- ctrl+alt+flecha para multiplicar cursor / alt+mouse -->
+    <hr/> 
+    <!-- cambio de tema entre parrafos, de forma visual representado como una linea horizontal sin embargo actualmente no se deberia usar para esto -->
+    <h2>Otro tema</h2>
+    <h3>Parrafos</h3>
+    <p>
+        <span style="color:red">Lorem ipsum dolor</span>, sit amet consectetur adipisicing elit.<br/> Fuga cum earum tenetur, ad odio blanditiis minima omnis animi nihil possimus deleniti deserunt ipsum magnam quidem. Laborum minus explicabo totam architecto?
+    </p>
+    <hr/>
+    <h2>link</h2>
+    <h3>ancla</h3>
+    <a target="_self" href="http://www.google.com">google</a><br>
+    <a target="_blank" href="http://www.google.com">google en ventana aparte</a>
+    <!-- Ancla: crea enlaces
+    su atributo target por defecto es "_Self" (target _top y _parent se encuentra en desuso) -->
+    <hr>
+    <h2>Formulario</h2>
+    <form action="/cyberform" method="post">
+        <label for="nombre">Nombre</label><br><br>
+        <input 
+        type="text" 
+        id="nombre" 
+        name="nombre"
+        placeholder="indica tu nombre"
+        /><br><br>
+        <label for="edad">Edad</label><br><br>
+        <input 
+        type="number" 
+        id="edad" 
+        name="edad"
+        placeholder="indica tu edad"
+        required
+        /><br><br>
+        <label for="email">E-mail</label><br><br>
+        <input 
+        type="email" 
+        id="email" 
+        name="email"
+        placeholder="indica tu E-mail"
+        required
+        /><br><br>
+        <label for="password">Password</label><br><br>
+        <input 
+        type="password" 
+        id="password" 
+        name="password"
+        placeholder="password"
+        required
+        /><br><br>
+        <label for="texto">Texto</label><br><br>
+        <textarea 
+        name="texto" 
+        id="texto" 
+        cols="30" 
+        rows="10"
+        placeholder="ingresa tu comentario"
+        ></textarea><br><br>
+        <hr/>
+        <input type="submit" value="guardar">
+    </form>
+    <hr>
+    <h2>Imagen</h2>
+    <img 
+    src="public/download.jpg" 
+    alt="cyberpank-1"
+    height="500"
+    width="500"
+    >
+        
+</body>
+</html>
