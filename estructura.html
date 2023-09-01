@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- meta es declaracion del tipo de documento e idioma para gestion de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- Ajuste de escala -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keyword"
+      content="Esta pag. trata articulos de juegos de Nintendo"
+    />
+    <!-- indica quien o quienes son el o los autores -->
+    <meta name="author" content="Cohorte 7 Cyberpunk" />
+    <!-- indica los derechos del autor copyright -->
+    <meta name="copyright" content="@2020 Cyberpunk" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- configuracion del titulo de la pagina (Importante para el SEO) -->
+    <title>Estructura HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Inicio del cuerpo de mi página -->
+  <body>
+    <!-- header: -->
+    <header>
+      <!-- style es una atributo -->
+      <a href="index.html">
+        <img src="public/descarga.png" alt="Nintendo" width="80" />
+      </a>
+      <h1>Estructura de documento HTML</h1>
+      <nav>
+        <ul>
+          <li class="myli">
+            <a href="index.html">Introduccion a HTML5</a>
+          </li>
+          <li class="myli">
+            <a href="index.html">Estructura de un documento HTML</a>
+          </li>
+          <li class="myli">Introduccion a CSS</li>
+          <li class="myli">Introduccion a JS</li>
+          <li class="myli">Introduccion al DOM</li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main:  -->
+    <main>
+      <section>
+        <h2>Juegos de Nintendo</h2>
+        <article id="article-1">
+          <h3>Mario Bros</h3>
+          <img
+            src="public/super-mario-bros-movie-comercial-2.jpg_1902800913.webp"
+            alt="mb"
+            height="300"
+            width="300"
+          />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+            reiciendis cum voluptas. Repellendus sunt distinctio repellat
+            doloribus molestias, consectetur dignissimos est quae veniam, iusto
+            libero consequuntur fugiat! Dicta, eius numquam.
+          </p>
+        </article>
+        <article>
+          <h3>Donkey kong</h3>
+          <img src="public/descarga.jpeg" alt="mb" height="300" width="300" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+            reiciendis cum voluptas. Repellendus sunt distinctio repellat
+            doloribus molestias, consectetur dignissimos est quae veniam, iusto
+            libero consequuntur fugiat! Dicta, eius numquam.
+          </p>
+        </article>
+      </section>
+    </main>
+    <!-- footer: -->
+    <footer>@copy right Cyberpunk 2023</footer>
+    <script src="main.js"></script>
+  </body>
+</html>
