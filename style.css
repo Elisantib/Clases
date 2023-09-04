@@ -1,3 +1,8 @@
+/* selector global */
+* {
+  box-sizing: content-box;
+}
+
 .myli {
   background-color: bisque;
   color: red;
@@ -6,6 +11,153 @@ header {
   background-color: aqua;
   color: blue;
 }
+
+.content-content-box > div {
+  background-color: green;
+  width: 300px;
+  height: 10px;
+  margin: 30px;
+  border: 10px solid black;
+}
+
 #article-1 {
   background-color: aquamarine;
+}
+#myp {
+  color: blue;
+}
+.myp {
+  font-size: 24px;
+}
+.back {
+  background-color: brown;
+}
+.color-rojo {
+  color: red;
+}
+.back-azul {
+  background-color: blue;
+}
+/* MODELO DE CAJA */
+
+.contenedor {
+  margin: 100px;
+  background-color: violet;
+  padding: 10px;
+  border: 5px solid red;
+  color: green;
+}
+.contenido {
+  background-color: aquamarine;
+}
+.contenedor-con-imagen {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background-color: aqua;
+  background-image: url("/public/download.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.contenido-con-imagen {
+  background-color: white;
+}
+/* Selectores */
+
+/* selector por elemento */
+span {
+  font-weight: bold;
+}
+
+/* Asigna los mismos estilos a los elementos con nombres diferentes, esta regla afecta a (en este caso) todos los elementos <p> y <span> */
+p,
+span {
+  color: blueviolet;
+}
+/* afecta a solo los elementos <p> que se encuentran dentro de la etiqueta <main>, ya sea contenido directo o indirecto */
+
+main p {
+  background-color: aquamarine;
+}
+/* Usa el caracter > para referenciar a un elemento que es hijo directo */
+main > section > article > .contenedor-parrafo > p {
+  font-size: 25px;
+}
+
+/* Este selector hace referencia a elementos que estan precedidos por otros elementos: ambos deben estar al mismo nivel */
+
+h1 + p {
+  color: red;
+}
+
+/* Estilos mas usados*/
+/* Declara el tipo de letra que se usa para mostrar en un texto. Se pueden declarar multiples valores separados por coma para ofrecer al navegadir varias alternativas en vaso de que alguna no se encuentre disponible */
+.container {
+  border-top: 1px solid black;
+  padding: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container > .content > p {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-size: 25px; /* determina el tamaño de la fuente; puede estar incl. en px, pt, %, rem, em */
+  font-weight: 100 /* bold (100 - 1000) */;
+  font-style: oblique; /* normal, italic, oblique */
+}
+
+.content > h3 {
+  background-color: bisque;
+  font: bold 30px arial, sans-serif; /* permite declarar varios atributos al mismo tiempo, separados por espacios. 1°grosor, 2°tamaño, 3°familia de fuente */
+  text-align: center; /* left, right, center, justify*/
+  line-height: 30px; /* define el espacio entre lineas */
+}
+
+/* Colores */
+.mydiv {
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgb(202, 172, 2);
+  padding: 20px;
+  background-color: blueviolet;
+  background-image: url("/public/download.jpg");
+}
+.div-in-mydiv {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.div-in-mydiv-2 {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: #ff0000; /* 0-9 y A-F */
+}
+
+/* Tamaños */
+.div-in-mydiv-3 {
+  height: 50px;
+  width: 50px;
+  margin: 10px 20px 30px 40px;
+  border: 1px solid black;
+  background-color: #06ce20; /* 0-9 y A-F */
+}
+.tamano {
+  margin: 100px 20px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+.tamano-hijo {
+  height: 25%;
+  width: 25%;
+  background-color: red;
+}
+
+.div-vh-vw {
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
 }

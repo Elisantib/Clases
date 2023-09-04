@@ -1,9 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Estilos con archivos externos -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Estilos embebidos -->
+    <style>
+      div
+        .div-ejemplo-embebido {
+          color: red;
+        }
+    </style>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Introduccion a HTML5</a>
+          </li>
+          <li>
+            <a href="estructura.html">Estructura de un documento HTML</a>
+          </li>
+          <li>
+            <a href="introcss.html">Introduccion a CSS</a>
+          </li>
+          <li>
+            <a href="introjs.html">Introduccion a JS</a>
+          </li>
+          <li>
+            <a href="introdom.html"></a>Introduccion al DOM</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <!-- Content box -->
+        <article class="content-content-box"><div></div></article>
+        <article>
+          <p>holi</p>
+          <p class="myp back">Holi 1</p>
+          <p class="myp">Holi 2</p>
+          <p id="myp" class="myp">Holi 3</p>
+          <p class="myp color-rojo-back-azul">p con dos class</p>
+        </article>
+      </section>
+      <section>
+        <article>
+          <!-- Estilo en línea -->
+          <div class="div-ejemplo-embebido" style="background-color: blue">
+            holi
+          </div>
+        </article>
+        <!-- ELJEMPLO DE MODELO DE CAJA -->
+        <article>
+          <div class="contenedor">
+            <div class="contenido">Holi</div>
+          </div>
+        </article>
+        <!-- Ejemplo modelo caja con imagen -->
+        <article>
+          <div class="contenedor-con-imagen">
+            <div class="contenido-con-imagen">Holi</div>
+          </div>
+        </article>
+        <!-- Selectores -->
+        <article class="content-contenedor-parrafo">
+          <div class="contenedor-parrafo">
+            <h1>Este es el titulo del parrafo</h1>
+            <p>este es un <span>parrafo</span></p>
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>Estilos mas usados</h2>
+        <article>
+          <div class="container">
+            <div class="content">
+              <p>
+                Parrafo
+              </p>
+              <h3>Este es un detalle</h3>
+              <div class="mydiv">
+                <div class="div-in-mydiv"></div>
+                <div class="div-in-mydiv-2"></div>
+                <div class="div-in-mydiv-3"></div>
+              </div>
+              <div class="tamano">
+                <div class="tamano-hijo">sss</div>
+              </div>
+              <div class="div-vh-vw">texto</div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer> 
+    </footer>
+  </body>
 </html>
