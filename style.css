@@ -302,3 +302,80 @@ Es un sistema de elementos flexibles donde los elementos html se adaptan y coloc
   align-items: center;
   justify-content: center;
 }
+
+/* selector hijo */
+/* Comportamiento de elementos hijos dentro de contenedores flex: 
+
+1- order: Especifica el oden de los elementos
+2- flex-grow: Determina cuanto crece el elemento relativo al resto de elementos que estan dentro del contenedor flex */
+
+.flex-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: stretch;
+}
+.flex-container-2 > div {
+  display: flex;
+  /* margin: 10px; */
+  background-color: #007fff;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+.flex-container-2 > div:nth-child(1) {
+  order: 3; /* para cambiar el orden */
+  flex-grow: 1;
+  background-color: rgb(95, 170, 204);
+}
+.flex-container-2 > div:nth-child(2) {
+  order: 1;
+  flex-grow: 5;
+  background-color: blue;
+}
+
+.flex-container-2 > div:nth-child(3) {
+  order: 2;
+  flex-grow: 5;
+  background-color: rgb(62, 60, 184);
+}
+
+/* Flex - shrink */
+/* Determina cuanto se puede encoger un elemento en relación a los demás dentro de un contenedor flex */
+
+.flex-container-3 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: gray;
+}
+
+.flex-container-3 > div {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+}
+
+.flex-container-3 > div:nth-child(2) {
+  flex-shrink: 0;
+}
+
+/* flex-basic:
+Determina una longitud especifica */
+
+.flex-container-3 > div:nth-child(3) {
+  flex-basis: 200px;
+}
