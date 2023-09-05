@@ -3,6 +3,12 @@
   box-sizing: content-box;
 }
 
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
 .myli {
   background-color: bisque;
   color: red;
@@ -97,6 +103,7 @@ h1 + p {
   border-top: 1px solid black;
   padding: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
 }
 .container > .content > p {
   background-color: white;
@@ -135,6 +142,10 @@ h1 + p {
   background-color: #ff0000; /* 0-9 y A-F */
 }
 
+.content {
+  font-size: 30px;
+}
+
 /* Tamaños */
 .div-in-mydiv-3 {
   height: 50px;
@@ -156,8 +167,138 @@ h1 + p {
   background-color: red;
 }
 
+/* 1vw representa el 1% del ancho de la ventana, mientras que 1vh representa el 1% de la altura de la ventana. */
 .div-vh-vw {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 40px);
   background-color: blue;
+}
+
+.punto {
+  height: 100pt;
+  width: 100pt;
+  background-color: red;
+}
+.div-rem {
+  height: 20rem; /* relacion a la fuente de todo el html (documento) */
+  width: 20rem;
+  background-color: green;
+}
+.div-em {
+  height: 20em; /* relacion a la fuente del contenido */
+  width: 20em;
+  background-color: blue;
+}
+
+.contenedor-de-bordes > div {
+  height: 100px;
+  width: 100px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: #06ce20;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.borde-1 {
+  border-style: dashed !important;
+}
+.borde-2 {
+  border-style: double !important;
+}
+.borde-3 {
+  border-style: outset !important;
+}
+.borde-4 {
+  border-style: solid !important;
+}
+.borde-en-una-linea {
+  border: 1px solid red; /* tamaño linea (border with). 2° estilo de borde, 3° color */
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+/* Flex container afectara no solo a si mismo, tambien a lo que contiene
+
+Es un sistema de elementos flexibles donde los elementos html se adaptan y colocan automaticamente siendo mas facil personalizarlos
+*/
+/* 
+1 - flex-direction : define en que dirección se distribuiran los elementos dentro del contenedor
+ - column
+ - column-reverse
+ - row
+ - row-reverse
+
+ 2- flex-wrap: define si que los elementos dentro del contenedor puedan saltar a la siguiente fila o columna
+ - wrap
+ - nowrap
+
+ 3- fex-flow : Es una combinacion de las propiedades flex-directio y flex-wrap
+
+ 4- justify-conetnt : para alinear el contenido
+ - star
+ - center
+ - end
+ - flex-start
+ - flex-center
+ - flex-end
+
+ 5- align-items : se usa para alinear en vertical los elementos dentro del contenedor
+ - center
+ - start
+ - end
+ - stretch
+ - baseline
+
+ 6.-Align-content: para alinear las filas:: after
+ - space between
+ - space arround
+ - strech
+ - center
+ - flex start
+ - flex end
+ */
+
+/* display para disponerlo en formato de tarjetas verticales */
+/* cloumn, row, reverse, column reverse, row reverse */
+/* nowrap, wrap, wrap reverse */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+
+  height: 300px;
+}
+/* Flex item */
+.flex-container > div {
+  /* margin: 10px; */
+  background-color: #0956a3;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  /* la distancia q ocupa el componente en cada salto de linea line height */
+  line-height: 70px;
+}
+
+.contenedor-perfecto {
+  display: flex;
+  background-color: gray;
+  height: 40vh;
+  width: 40vw;
+  padding: 50px;
+  justify-content: center;
+  text-align: center;
+}
+.contenido-perfecto {
+  display: flex;
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
 }
