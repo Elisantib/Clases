@@ -379,3 +379,89 @@ Determina una longitud especifica */
 .flex-container-3 > div:nth-child(3) {
   flex-basis: 200px;
 }
+
+/* Display Grid nos permitira disponer elementos en 2 dimenciones a diferencia de Flex que nos ayuda a disponer elementos solo en una dimencion  */
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+}
+
+.item {
+  background-color: rgb(20, 122, 122);
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: solid rgb(31, 100, 97) 2px;
+  border-collapse: collapse;
+}
+
+.grid-columns {
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* fr fr fr,repeat(cantidad, u.medida */
+}
+
+.grid-rows {
+  grid-template-rows: 1fr 50% 1fr;
+}
+
+.grid-rows-columns {
+  grid-template-rows: 1fr 50% 1fr;
+}
+
+.grid-rows-columns {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr); /* fr fr fr */
+}
+
+.primero {
+  grid-column-start: 1; /* Desde donde comienza */
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.estructura {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "_header _header"
+    "_sidelbar _main" "_footer _footer";
+  grid-template-rows: 50px 1fr 80px;
+  grid-template-columns: 300px 1fr;
+}
+
+._header {
+  grid-area: _header;
+  background-color: goldenrod;
+}
+._sidelbar {
+  grid-area: _sidelbar;
+  background-color: rgb(101, 148, 25);
+}
+._main {
+  grid-area: _main;
+  background-color: rgb(50, 165, 69);
+}
+._footer {
+  grid-area: _footer;
+  background-color: rgb(62, 165, 151);
+}
+
+.responsivo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  border: 1px solid #425364;
+  padding: 15px;
+  gap: 15px;
+}
+
+.responsivo > div {
+  background-color: #46ad75;
+  color: #166916;
+  padding: 30px;
+  margin: 15px;
+}
