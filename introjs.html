@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Intr. Js</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body class="introjs_">
+    <header class="header_">
+      <h1>Intro. JS</h1>
+    </header>
+    <main class="main_">
+      <section class="containerjs">
+        <h2>main</h2>
+        <article>
+          <div class="card">
+            <h2>Calculadora factorial</h2>
+            <label for="inputfactorial">numero</label>
+            <input type="number" id="inputfactorial" />
+            <i id="respuesta1">Respuesta</i>
+            <button onclick="calcularFactorial()">Calcular factorial</button>
+          </div>
+        </article>
+        <article>
+          <div class="card">
+            <h2>Verificar Palindromo</h2>
+            <label for="inputpalindromo">¿Es palindromo ?</label>
+            <input type="text" id="inputpalindromo" />
+            <i id="respuesta2">Respuesta</i>
+            <button onclick="verificarPalindromo()">Calcular factorial</button>
+          </div>
+        </article>
+      </section>
+      <aside>aside</aside>
+    </main>
+    <footer class="footer_">
+      <p>footer</p>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
 </html>
